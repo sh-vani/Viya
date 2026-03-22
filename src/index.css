@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aureeka Jewels Design System - Soft Gold & Cream */
+
+@layer base {
+  :root {
+    /* Core cream & gold palette */
+    --background: 40 33% 98%;
+    --foreground: 30 20% 15%;
+    
+    /* Status bar - warm dark */
+    --status-bar: 30 25% 12%;
+    --status-bar-foreground: 40 30% 95%;
+    
+    /* Navigation */
+    --nav-background: 40 33% 98%;
+    --nav-foreground: 30 20% 20%;
+    --nav-hover: 36 50% 35%;
+    
+    /* Primary - Rich Gold */
+    --primary: 36 72% 45%;
+    --primary-foreground: 40 33% 98%;
+    --primary-hover: 36 72% 38%;
+    
+    /* Secondary - Warm cream */
+    --secondary: 40 30% 94%;
+    --secondary-foreground: 30 20% 25%;
+    
+    --muted: 40 20% 92%;
+    --muted-foreground: 30 10% 45%;
+    
+    /* Accent - Soft rose gold */
+    --accent: 15 45% 65%;
+    --accent-foreground: 30 20% 15%;
+    
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 36 72% 45%;
+    
+    /* Cards and surfaces */
+    --card: 40 33% 99%;
+    --card-foreground: 30 20% 15%;
+    
+    --popover: 40 33% 99%;
+    --popover-foreground: 30 20% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Gold gradient */
+    --gold-gradient: linear-gradient(135deg, hsl(36 72% 50%) 0%, hsl(40 60% 65%) 100%);
+    --cream-gradient: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(40 25% 93%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(36 30% 30% / 0.1);
+    --shadow-gold: 0 4px 30px -8px hsl(36 72% 45% / 0.25);
+    
+    --radius: 0.5rem;
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 40 30% 96%;
+    --sidebar-foreground: 30 15% 30%;
+    --sidebar-primary: 36 72% 45%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 40 25% 92%;
+    --sidebar-accent-foreground: 30 20% 20%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 36 72% 45%;
+  }
+
+  .dark {
+    --background: 30 15% 8%;
+    --foreground: 40 25% 92%;
+    
+    --status-bar: 30 20% 5%;
+    --status-bar-foreground: 40 25% 90%;
+    
+    --nav-background: 30 15% 8%;
+    --nav-foreground: 40 20% 85%;
+    --nav-hover: 36 60% 55%;
+    
+    --primary: 36 65% 55%;
+    --primary-foreground: 30 15% 8%;
+    --primary-hover: 36 65% 48%;
+    
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 40 20% 80%;
+    
+    --muted: 30 15% 18%;
+    --muted-foreground: 40 15% 55%;
+    
+    --accent: 15 40% 50%;
+    --accent-foreground: 40 25% 92%;
+    
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 36 65% 55%;
+    
+    --card: 30 15% 10%;
+    --card-foreground: 40 25% 92%;
+    
+    --popover: 30 15% 10%;
+    --popover-foreground: 40 25% 92%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 40 25% 92%;
+    
+    --gold-gradient: linear-gradient(135deg, hsl(36 60% 45%) 0%, hsl(40 50% 55%) 100%);
+    --cream-gradient: linear-gradient(180deg, hsl(30 15% 10%) 0%, hsl(30 15% 14%) 100%);
+    
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-gold: 0 4px 30px -8px hsl(36 65% 55% / 0.3);
+
+    --sidebar-background: 30 15% 10%;
+    --sidebar-foreground: 40 20% 80%;
+    --sidebar-primary: 36 65% 55%;
+    --sidebar-primary-foreground: 30 15% 8%;
+    --sidebar-accent: 30 15% 15%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 30 15% 18%;
+    --sidebar-ring: 36 65% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-body {
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .gold-gradient {
+    background: var(--gold-gradient);
+  }
+  
+  .cream-gradient {
+    background: var(--cream-gradient);
+  }
+  
+  .text-gold {
+    @apply text-primary;
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(36 72% 45% / 0.15) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
